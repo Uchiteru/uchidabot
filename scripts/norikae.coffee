@@ -72,6 +72,7 @@ module.exports = (robot) ->
       else
         msg.send "something went wrong."
 
+
   robot.respond /train (\S+) (\S+) now/i, (msg) ->
     max = 1
     url = createUrl msg.match[1], msg.match[2]
