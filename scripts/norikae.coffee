@@ -37,7 +37,7 @@ module.exports = (robot) ->
     dhh = hour
     dmn = minutes
     chaku = 1
-    option = "Dym=#{dym}&Ddd=#{ddd}&Dhh=#{dhh}&Dmn=#{dmn}&Cway=#{chaku}"
+    option = "Dym=#{dym}&Ddd=#{ddd}&Dhh=#{dhh}&Dmn=#{dmn}&Cway=#{chaku}&&S.x=65&S.y=5"
     return option
 
   departureOption = (minutes) ->
