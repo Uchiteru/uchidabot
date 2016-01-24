@@ -17,7 +17,7 @@
 #   sn0opy
 
 getSong = (msg, usr) ->
-  user = usr ? msg.match[1]
+  user = usr ? msg.match[2]
   apiKey = process.env.HUBOT_LASTFM_APIKEY
   msg.http('http://ws.audioscrobbler.com/2.0/?')
     .query(method: 'user.getrecenttracks', user: user, api_key: apiKey, format: 'json')
