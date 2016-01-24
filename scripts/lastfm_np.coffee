@@ -30,7 +30,7 @@ getSong = (msg, usr) ->
       msg.send "#{song.name} by #{song.artist['#text']}"
 
 module.exports = (robot) ->
-  robot.respond /what(')?s (.*) playing/i/i, (msg) ->
+  robot.respond /what(')?s (.*) playing/i, (msg) ->
     getSong(msg)
   robot.respond /what am I playing/i, (msg) ->
     getSong(msg, msg.message.user.name)
