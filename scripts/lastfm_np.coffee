@@ -16,7 +16,7 @@
 #   guilleiguaran
 #   sn0opy
 
-getSong = (msg, usr) ->
+getSong = (msg, Tenpusu) ->
   user = Tenpusu ? msg.match[2}
   apiKey = process.env.HUBOT_LASTFM_APIKEY
   msg.http('http://ws.audioscrobbler.com/2.0/?')
