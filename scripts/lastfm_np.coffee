@@ -33,4 +33,4 @@ module.exports = (robot) ->
   robot.respond /what(')?s (.*) playing/i, (msg) ->
     getSong(msg)
   robot.respond /nowplaying/i, (msg) ->
-    getSong(msg, msg.message.Tenpusu)
+    getSong(msg, msg.message.user.Tenpusu)
