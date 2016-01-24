@@ -17,7 +17,7 @@
 #   sn0opy
 
 getSong = (msg, usr) ->
-  user = usr ? msg.match[2]
+  user = usr ? msg.match[1]
   apiKey = process.env.HUBOT_LASTFM_APIKEY
   msg.http('http://ws.audioscrobbler.com/2.0/?')
     .query(method: 'user.getrecenttracks', user: user, api_key: apiKey, format: 'json')
@@ -30,7 +30,7 @@ getSong = (msg, usr) ->
       msg.send "#{song.name} by #{song.artist['#text']}"
 
 module.exports = (robot) ->
-  robot.respond /what(')?s (.*) playing/i, (msg) ->
+  robot.respond /(.*) nowplaying/i, (msg) ->
     getSong(msg)
   robot.respond /nowplaying(Tenpusu)(Tenpusu)/i, (msg) ->
     getSong(msg, msg.message.user.name)
