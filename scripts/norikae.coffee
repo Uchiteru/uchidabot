@@ -22,13 +22,13 @@ Moment = require "moment"
 
 module.exports = (robot) ->
   createUrl = (from, to) ->
-    "http://www.jorudan.co.jp/norikae/cgi/nori.cgi?Sok=1&eki1=#{from}&eki2=#{to}"
+    "http://www.jorudan.co.jp/norikae/cgi/nori.cgi?Sok=1&eki1=#{from}&eki2=#{to}&eki3=&via_on=1"
 
   createDepartureUrl = (from, to, laterMinutes) ->
-    createUrl(from, to) + "&" + departureOption(laterMinutes) + "&S.x=65&S.y=5"
+    createUrl(from, to) + "&" + departureOption(laterMinutes) + "&S.x=65&S.y=5=%E6%A4%9C%E7%B4%A2&Cmap1=&rf=nr&pg=0&eok1=&eok2=&eok3=&Csg=1"
 
   createArrivalUrl = (from, to, hour, minutes) ->
-    createUrl(from, to) + "&" + arrivalOption(hour, minutes) + "&S.x=65&S.y=5"
+    createUrl(from, to) + "&" + arrivalOption(hour, minutes) + "&S.x=65&S.y=5=%E6%A4%9C%E7%B4%A2&Cmap1=&rf=nr&pg=0&eok1=&eok2=&eok3=&Csg=1"
 
   arrivalOption = (hour, minutes) ->
     today = Moment()
