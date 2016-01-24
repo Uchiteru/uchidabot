@@ -22,7 +22,7 @@ Moment = require "moment"
 
 module.exports = (robot) ->
   createUrl = (from, to) ->
-    "http://www.jorudan.co.jp/norikae/cgi/nori.cgi?Sok=1&eki1=#{from}&eki2=#{to}&"
+    "http://www.jorudan.co.jp/norikae/cgi/nori.cgi?eki1=#{from}&eki2=#{to}&"
 
   createDepartureUrl = (from, to, laterMinutes) ->
     createUrl(from, to) + "&" + departureOption(laterMinutes)
