@@ -10,5 +10,6 @@
   "hubot-rules",
   "hubot-shipit",
   "hubot-yahoo-amagumo",
-  "moment"
+  "moment",
+  "hubot-lastfm"
 ]
