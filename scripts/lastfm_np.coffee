@@ -20,7 +20,7 @@ getSong = (msg, usr) ->
   user = Tenpusu
   apiKey = process.env.HUBOT_LASTFM_APIKEY
   msg.http('http://ws.audioscrobbler.com/2.0/?')
-    .query(method: 'user.getrecenttracks', user: Tenpusu, api_key: apiKey, format: 'json')
+    .query(method: 'user.getrecenttracks', user: user, api_key: apiKey, format: 'json')
     .get() (err, res, body) ->
       results = JSON.parse(body)
       if results.error
