@@ -9,8 +9,9 @@
 #
 # Author:
 #  Uchiteru
-request = require("request");
-cheerio = require("cheerio");
+request = require("request")
+cheerio = require("cheerio")
+client= require('cheerio-httpcli')
 
 
 module.exports = (robot) ->
@@ -23,5 +24,10 @@ module.exports = (robot) ->
 
     request options, (error, response, body) ->
       $ = cheerio.load body
-      messeage = $('div.postcontent').first().text()
-      msg.send(messeage)
+      message = $('div.postcontent').first()
+      img = message.find('img')
+      img = img.map(->
+        $(this).attr 'src'
+      ).get()
+      message = message.text()
+      msg.send "#{message},#{img}"
