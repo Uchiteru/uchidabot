@@ -11,7 +11,6 @@
 #  Uchiteru
 request = require("request")
 cheerio = require("cheerio")
-client= require('cheerio-httpcli')
 
 
 module.exports = (robot) ->
