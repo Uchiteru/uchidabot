@@ -5,7 +5,7 @@
 #   None
 #
 # Commands:
-#   nanablog - can see  new entry Nana Mizuki wirte .
+#   nanablog - can see  new entry Nana Mizuki write .
 #
 # Author:
 #  Uchiteru
@@ -29,4 +29,4 @@ module.exports = (robot) ->
         $(this).attr 'src'
       ).get().join('\n')
       message = message.text()
-      msg.send "#{message},#{img}"
+      msg.send "#{message}\n#{img}"
