@@ -27,6 +27,6 @@ module.exports = (robot) ->
       img = message.find('img')
       img = img.map(->
         $(this).attr 'src'
-      ).get().join('\n')
+      ).get()
       message = message.text()
       msg.send "#{message},#{img}"
