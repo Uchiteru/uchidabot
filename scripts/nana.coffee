@@ -29,4 +29,4 @@ module.exports = (robot) ->
         $(this).attr 'src'
       ).get().join('\n')
       message = message.text()
-      msg.send "#{message}\n#{img}"
+      msg.send "#{message},#{img}"
